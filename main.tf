@@ -63,7 +63,7 @@ resource "aws_s3_bucket_object" "object" {
 data "aws_route53_zone" "domain_name" {
   count        = var.use_default_domain ? 0 : 1
   name         = var.hosted_zone
-  private_zone = false
+  private_zone = var.private_zone
 }
 
 resource "aws_route53_record" "route53_record" {
