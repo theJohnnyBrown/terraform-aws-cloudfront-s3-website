@@ -32,3 +32,8 @@ variable "upload_sample_file" {
   default     = false
   description = "Upload sample html file to s3 bucket"
 }
+
+variable "private_zone" {
+  default = false
+  description = "Whether to use a private route 53 hosted zone"
+}
